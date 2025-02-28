@@ -20,8 +20,10 @@ namespace Controllers
             var relative_mouse_position = mouse_position - transform.position;
             relative_mouse_position.z = 0;
 
-            transform.rotation = Quaternion.FromToRotation(Vector3.right, relative_mouse_position);
+            float angle = Mathf.Atan2(relative_mouse_position.y, relative_mouse_position.x) * Mathf.Rad2Deg;
+            rb.MoveRotation(angle);
         }
+
 
         void Movement()
         {

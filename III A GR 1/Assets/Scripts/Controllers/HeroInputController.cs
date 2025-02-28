@@ -11,7 +11,7 @@ namespace Controllers
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                shootingController.shoot();
+                shootingController.Shoot();
             }
         }
     }
